@@ -4,7 +4,7 @@ async function getChatGPTResponse(userMessage) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer sk-...6wN0', // Replace with your actual API key
+      'Authorization': 'Bearer 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', // Replace with your actual API key
     },
     body: JSON.stringify({
       'messages': [{'role': 'system', 'content': 'You are a user'}, {'role': 'user', 'content': userMessage}],
