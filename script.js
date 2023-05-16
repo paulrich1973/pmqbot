@@ -22,12 +22,10 @@ async function handleUserInput() {
   const userInput = document.getElementById('user-input').value.trim();
 
   if (userInput !== '') {
-    addMessageToLog(userInput, 'user');
-    document.getElementById('user-input').value = ''; // Clear input field
-
     const botResponse = await getChatGPTResponse(userInput);
-
+    addMessageToLog(userInput, 'user');
     addMessageToLog(botResponse, 'bot');
+    document.getElementById('user-input').value = ''; // Clear input field
   }
 }
 
